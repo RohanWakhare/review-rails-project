@@ -1,0 +1,24 @@
+
+<h1 style="margin:3rem"> All Cafes </h1>
+
+ <div class="search" >
+    <%= render 'search' %>
+</div>
+
+<div class="container-fluid">
+    <div class="row" >
+        <% @shops.each do |s| %>
+          <div class="col-md-4"  style="display:inline-block" >
+                <div class="card">
+                    <div class="card-body bg-card"> 
+                           <div class="img-cafe">
+                           
+                            <%= render partial: 'states/all_cafes', locals: {s: s} %>   
+                         <%= render partial: 'edit_shop', locals: {s: s} %>   
+
+                    </div>   
+                </div>
+            </div>
+        <% end %>
+    </div>
+</div>
